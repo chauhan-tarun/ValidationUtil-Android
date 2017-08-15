@@ -1,29 +1,41 @@
 package com.util.validation;
 
+import android.util.Patterns;
+
 /**
  * A ValidationUtil library class to help you optimize your code
  * and easily implement <b>validations</b> on your text fields.
- * <p>
- * Simply call {@link #isValid(String, ValidationType)} by passing your text
- * that needs to be validated and the validation type.
- * Use {@link ValidationType} class to define the type of your text that
- * needs to be validated.
  */
 
 public class ValidationUtil {
 
-    /**
-     * This method will do the validation on text
-     *
-     * @param validationText The text that needs to be validated
-     * @param validationType The {@link ValidationType} to specify the type of validation to be used
-     *                       on th view.
-     * @return Returns the boolean to update whether the validation is success of failed
-     */
-    public static boolean isValid(String validationText, ValidationType validationType) {
+    public static boolean isValidName(String name) {
 
+        return checkInput(name.trim()) && name.matches("[a-zA-Z ]*");
+    }
 
-        return false;
+    public static boolean isValidUsername(String username) {
+
+        return checkInput(username) && username.matches("^[a-zA-Z0-9._-]*$");
+    }
+
+    public static boolean isValidEmail(String email) {
+
+        return checkInput(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
+
+    public static boolean isValidPhone(String phone) {
+
+        return checkInput(phone) && Patterns.PHONE.matcher(phone).matches();
+    }
+
+    public static boolean isValidPassword(String password, int minLength) {
+
+        return checkInput(password) && password.matches("^[a-zA-Z0-9@#$%^&+=]{"+minLength+",}$");
+    }
+
+    private static boolean checkInput(String value) {
+        return !(value == null || value.isEmpty());
     }
 
 }
