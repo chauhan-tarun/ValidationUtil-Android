@@ -2,7 +2,7 @@
 A Validation Util class for adding validations to input fields in Android
 
 ### Usage
-1. Add [ValidationUtil.kt](app/src/main/java/com/util/validation/example/ValidationUtil.kt) into your project
+1. For *java* add [ValidationUtilJava.java](app/src/main/java/com/util/validation/example/ValidationUtilJava.java) and for *kotlin* add [ValidationUtil.kt](app/src/main/java/com/util/validation/example/ValidationUtil.kt) into your project
 2. In your MainActivity.java(or MainActivity.kt) write below code to check for validations
 ```
     if (ValidationUtil.isValidUsername(this, et_username.text.toString())
