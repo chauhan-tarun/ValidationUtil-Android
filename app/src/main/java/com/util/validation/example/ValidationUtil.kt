@@ -27,7 +27,7 @@ object ValidationUtil {
 
     public fun showToast(context: Context, message: String) = Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 
-    public fun isNullOrEmpty(input: String?, toastTag: String = "undefined"): Boolean = input == null || input.isEmpty()
+    public fun isNullOrEmpty(input: String?): Boolean = input == null || input.isEmpty()
 
     public fun isValidUsername(context: Context, username: String?, regex: String = "^[a-zA-Z0-9._-]{3,20}$"): Boolean {
         when {
