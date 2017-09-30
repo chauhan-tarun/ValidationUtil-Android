@@ -1,5 +1,6 @@
 # ValidationUtil - Android
 A Validation Util class for adding validations to input fields in Android
+
 Clone or Download this sample code to get started :wink:
 
 ### Usage
