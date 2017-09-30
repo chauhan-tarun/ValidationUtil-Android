@@ -1,5 +1,6 @@
 # ValidationUtil - Android
 A Validation Util class for adding validations to input fields in Android
+Clone or Download this sample code to get started :wink:
 
 ### Usage
 1. For *java* add [ValidationUtilJava.java](app/src/main/java/com/util/validation/example/ValidationUtilJava.java) and for *kotlin* add [ValidationUtil.kt](app/src/main/java/com/util/validation/example/ValidationUtil.kt) into your project
